@@ -1,0 +1,17 @@
+{
+  "name": "chronicle",
+  "title": "Chronicle",
+  "id": "jid1-vurtLQRxQY3EUg",
+  "description": "",
+  "author": "Mozilla (https://mozilla.org)",
+  "license": "MPL 2.0",
+  "version": "0.1",
+  "preferences": [
+    {
+        "name": "url",
+        "title": "Server URL",
+        "type": "string",
+        "value": "http://localhost:8080/"
+    }
+  ]
+}
