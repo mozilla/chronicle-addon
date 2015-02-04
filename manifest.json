@@ -10,6 +10,7 @@
   },
   "permissions": [
     "history",
+    "tabs",
     "http://*/",
     "https://*/"
   ],
