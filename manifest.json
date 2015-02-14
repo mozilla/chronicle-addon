@@ -5,16 +5,27 @@
   "description": "Chronicle add-on",
   "version": "1.0",
 
+  "content_security_policy": "script-src 'self' ; object-src 'self'",
   "browser_action": {
     "default_icon": "icon.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": [
+        "data/lib/p.js",
+        "data/lib/almond.js",
+        "data/content_scripts/visit.js",
+        "data/content_scripts/main.js"
+      ]
+    }
+  ],
   "permissions": [
-    "history",
-    "tabs",
     "http://*/",
     "https://*/"
   ],
   "background": {
-    "page": "background/background.html"
+    "page": "chrome/background.html"
   }
 }
