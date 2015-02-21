@@ -1,8 +1,5 @@
-var SERVER_URL = 'https://chronicle.dev.mozaws.net';
-var CREATE_VISIT_ENDPOINT = SERVER_URL + '/v1/visits';
-
 chrome.browserAction.onClicked.addListener(function (tab) {
-  chrome.tabs.query({ url: SERVER_URL + '/*' }, function (tabs) {
+  chrome.tabs.query({ url: config.chronicleServer + '/*' }, function (tabs) {
     // if we already have an open chronicle tab, navigate to it
     if (tabs.length > 0) {
       var target = tabs[0];
@@ -12,7 +9,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     }
     // otherwise open a new tab to chronicle
     else {
-      chrome.tabs.create( { url: SERVER_URL, active: true });
+      chrome.tabs.create( { url: config.chronicleServer, active: true });
     }
   });
 });
