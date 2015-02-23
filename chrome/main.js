@@ -1,4 +1,6 @@
-chrome.browserAction.onClicked.addListener(function (tab) {
+/*global config*/
+
+chrome.browserAction.onClicked.addListener(function (/*tab*/) {
   chrome.tabs.query({ url: config.chronicleServer + '/*' }, function (tabs) {
     // if we already have an open chronicle tab, navigate to it
     if (tabs.length > 0) {

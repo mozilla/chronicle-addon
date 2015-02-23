@@ -1,5 +1,7 @@
+/*global config*/
+
 function Visit(url, title, visitedAt) {
-  this.url = url
+  this.url = url;
   this.title = title;
   this.visitedAt = visitedAt || new Date().toISOString();
 }
@@ -19,8 +21,7 @@ Visit.prototype.save = function() {
         deferred.reject(xhr.responseText);
       }
     }
-  }
+  };
   xhr.send(body);
   return deferred.promise;
-}
-
+};
