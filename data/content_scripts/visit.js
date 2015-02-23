@@ -1,6 +1,3 @@
-var SERVER_URL = 'https://chronicle.dev.mozaws.net';
-var CREATE_VISIT_ENDPOINT = SERVER_URL + '/v1/visits';
-
 function Visit(url, title, visitedAt) {
   this.url = url
   this.title = title;
@@ -11,7 +8,7 @@ Visit.prototype.save = function() {
   var deferred = P.defer();
   var xhr = new XMLHttpRequest();
   var body = JSON.stringify({ url: this.url, title: this.title, visitedAt: this.visitedAt });
-  xhr.open('POST', CREATE_VISIT_ENDPOINT, true);
+  xhr.open('POST', config.chronicleServer + '/v1/visits', true);
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.onreadystatechange = function() {
     if(xhr.readyState === 4) {

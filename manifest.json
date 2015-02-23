@@ -16,6 +16,7 @@
       "js": [
         "data/lib/p.js",
         "data/lib/almond.js",
+        "data/content_scripts/config.js",
         "data/content_scripts/visit.js",
         "data/content_scripts/main.js"
       ]
