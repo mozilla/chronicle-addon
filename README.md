@@ -21,3 +21,5 @@
 - Win: `chrome.exe --pack-extension=c:\PATH_TO_EXT_ROOT --pack-extension-key=c:\EXT_KEY.pem`
 - Mac: `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome  --pack-extension=/PATH_TO_EXT_ROOT --pack-extension-key=/EXT_KEY.pem`
 - Lnx: `./chrome --pack-extension=c:\PATH_TO_EXT_ROOT --pack-extension-key=c:\EXT_KEY.pem`
+
+_Note: pem file is only needed when packaging for public distribution_
